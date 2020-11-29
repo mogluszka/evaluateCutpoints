@@ -1,0 +1,29 @@
+Package: evaluateCutpoints
+Title: Adaptable continuous data distribution system for determining survival in Kaplan-Meier estimator
+Version: 1.0
+Authors@R: 
+  c(person(given  = "Magdalena",
+    family = "Ogłuszka",
+    role = c("aut", "cre"),
+    email = "m.ogluszka@outlook.com"))
+  person(given = "Magdalena",
+    family = "Orzechowska",
+    role = c("aut", "cre"),
+    email = "magdalena.orzechowska@umed.lodz.pl")
+Description: A suite of algorithms used for survival determination and hazard ratio calculations with estimation of significant cut point regarding any variable of continuous type
+License: `use_mit_license()`
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Depends:
+  OptimalCutpoints,
+  ggplot2,
+  survival,
+  survMisc,
+  scales,
+  survminer,
+  maxstat,
+  plotly,
+  rolr,
+  R.utils
