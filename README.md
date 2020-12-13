@@ -16,6 +16,8 @@ devtools::install_github("mogluszka/evaluateCutpoints")
 
 # Data
 
+Data should contain columns with the results for each biomarker, time and outcome variables.
+
 You can download data example from `data` folder. Then use the following:
 
 ```
