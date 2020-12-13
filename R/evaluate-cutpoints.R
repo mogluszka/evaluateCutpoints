@@ -117,7 +117,7 @@ mainFunction <- function(cutpoints, df, time, event, biomarker) {
 #' @return results from a selected analysis
 #' @export
 
-evaluateCutpoints <- function (mainDir, df, resultsDirName, biomarkerList, time, event, setCutpoint, setCutpoint2, df) {
+evaluateCutpoints <- function (mainDir, resultsDirName, biomarkerList, time, event, setCutpoint, setCutpoint2, df) {
   
   setwd(mainDir)
   
