@@ -117,10 +117,7 @@ mainFunction <- function(cutpoints, df, time, event, biomarker) {
 #' @return results from a selected analysis
 #' @export
 
-evaluateCutpoints <- function (mainDir, file, resultsDirName, biomarkerList, time, event, setCutpoint, setCutpoint2, df) {
-  
-  table <- read.table(file, sep = "\t", header = TRUE)
-  df <- data.frame(table)
+evaluateCutpoints <- function (mainDir, df, resultsDirName, biomarkerList, time, event, setCutpoint, setCutpoint2, df) {
   
   setwd(mainDir)
   
