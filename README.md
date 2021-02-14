@@ -1,6 +1,6 @@
 # evaluateCutpoints
 
-evaluateCutpoints is an R package for multiple cutpoints determination in biomedical research. It is an extension of evaluateCutpoints application (http://wnbikp.umed.lodz.pl/Evaluate-Cutpoints/).
+evaluateCutpoints is a R package for multiple cutpoints determination in biomedical research. It is an extension of evaluateCutpoints application (http://wnbikp.umed.lodz.pl/Evaluate-Cutpoints/).
 It allows to calculate optimal cutoff value for each biomarker in a dataset and produces a set of statistics for each cutpoint (histograms, Kaplan-Meier curves and estimates - hazard ratios, confidence intervals, p-values).
 Additionally, the user can pick a cutpoint value for each biomarker manually.
 
