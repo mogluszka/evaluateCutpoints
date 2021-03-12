@@ -37,8 +37,8 @@ Required variables:
 - **biomarkerList:** a list of analyzed biomarkers,
 - **time:** time variable,
 - **event:** event variable,
-- **setCutpoint:** should be NULL if cutpoints need be calculated; if the user wants to set one cutoff value and produce statistics for two resulting groups, setCutpoint should be a list of cutpoint values for each biomarker in biomarkerList,
-- **setCutpoint2:** should be NULL if cutpoints need be calculated; if the user wants to set two cutoff values per biomarker and produce statistics for three resulting groups, setCutpoint2 should be a second list of cutpoint values (additionally to setCutpoint variable) for each biomarker in biomarkerList.
+- **setCutpoint:** should be NULL if cutpoints need to be calculated; if the user wants to set one cutoff value and produce statistics for two resulting groups, setCutpoint should be a list of cutpoint values for each biomarker in biomarkerList,
+- **setCutpoint2:** should be NULL if cutpoints need to be calculated; if the user wants to set two cutoff values per biomarker and produce statistics for three resulting groups, setCutpoint2 should be a second list of cutpoint values (additionally to setCutpoint variable) for each biomarker in biomarkerList.
 
 ```
 library(evaluateCutpoints)
