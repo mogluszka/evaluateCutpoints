@@ -76,19 +76,19 @@ adaptCutpoint3groups <- function(setCutpoint, df, time, event, biomarker) {
   dirname <- paste(as.character(setCutpoint[1]), as.character(setCutpoint[2]), "_3groups")
   dir.create(dirname)
   setwd(dirname)
-  
+
   tryCatch({
     rolrMethod(setCutpoint, df, time, event, biomarker)
   }, error = function(e) {
     print("Please select cutpoints between minimum and maximum biomarker value")
   })
-  
+
   setwd('../..')
 }
 
 #' A function that decides which type of analysis to use.
-#' 
-#' 
+#'
+#'
 #' @param df input data frame
 #' @param time Time variable
 #' @param event Event variable
@@ -118,35 +118,35 @@ mainFunction <- function(cutpoints, df, time, event, biomarker) {
 #' @export
 
 evaluateCutpoints <- function (mainDir, resultsDirName, biomarkerList, time, event, setCutpoint, setCutpoint2, df) {
-  
+
   setwd(mainDir)
-  
+
   if ( dir.exists(resultsDirName)) {
     print("Directory already exists")
   } else {
     dir.create(resultsDirName)
   }
-  
-  currentDate <- format(Sys.time(), "%a %b %d %Y %X")
+
+  currentDate <- format(Sys.time(), "%a %b %d %Y %x")
   setwd(resultsDirName)
   dir.create(currentDate)
-  
+
   colNames <- colnames(df)
   colsCommaSeparated <- dput(colNames)
-  
+
   setwd(currentDate)
-  
+
   prepareCutpointsDf <- function(biomarker, biomarkerList, cutpoint = NULL, cutpoint2 = NULL) {
-    
+
     if (is.null(cutpoint) && is.null(cutpoint2)) {
       return (NULL)
     } else {
       cutpointsFunc(biomarker, biomarkerList, cutpoint, cutpoint2)
     }
   }
-  
+
   cutpointsFunc <- function(biomarker, biomarkerList, cutpoint = NULL, cutpoint2 = NULL) {
-    
+
     if (is.null(cutpoint2)) {
       cutpointDf <- data.frame(rbind(cutpoint))
     } else {
@@ -154,11 +154,11 @@ evaluateCutpoints <- function (mainDir, resultsDirName, biomarkerList, time, eve
     }
     colnames(cutpointDf) <- biomarkerList
     rownames(cutpointDf) <- NULL
-    
+
     result <- cutpointDf[[biomarker]]
-    
+
   }
-  
+
   if(is.null(setCutpoint) || is.null(setCutpoint2) || (length(setCutpoint) = length(biomarkerList)) || (length(setCutpoint2) = length(biomarkerList))) {
     for (b in biomarkerList) {
       dir.create(b)
