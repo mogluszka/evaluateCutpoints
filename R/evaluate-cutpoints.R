@@ -127,7 +127,7 @@ evaluateCutpoints <- function (mainDir, resultsDirName, biomarkerList, time, eve
     dir.create(resultsDirName)
   }
 
-  currentDate <- format(Sys.time(), "%a %b %d %Y %x")
+  currentDate <- format(Sys.time(), "%a %b %d %Y %H %M %S")
   setwd(resultsDirName)
   dir.create(currentDate)
 
